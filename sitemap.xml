@@ -3,18 +3,8 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://yuniver.se/posts/my-third-post/</loc>
+    <loc>https://yuniver.se/post/weight-loss/</loc>
     <lastmod>2019-01-09T16:02:03-07:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://yuniver.se/posts/second-post/</loc>
-    <lastmod>2019-01-09T15:29:24-06:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://yuniver.se/posts/first-post/</loc>
-    <lastmod>2018-08-01T19:05:24-06:00</lastmod>
   </url>
   
   <url>
@@ -23,19 +13,19 @@
   </url>
   
   <url>
-    <loc>https://yuniver.se/</loc>
-    <lastmod>2019-01-09T16:02:03-07:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://yuniver.se/posts/</loc>
+    <loc>https://yuniver.se/post/</loc>
     <lastmod>2019-01-09T16:02:03-07:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://yuniver.se/tags/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://yuniver.se/</loc>
+    <lastmod>2019-01-09T16:02:03-07:00</lastmod>
     <priority>0</priority>
   </url>
   

@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>The Yuniverse</title>
-    <link>https://yuniver.se/</link>
-    <description>Recent content on The Yuniverse</description>
+    <title>Posts on The Yuniverse</title>
+    <link>https://yuniver.se/post/</link>
+    <description>Recent content in Posts on The Yuniverse</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 09 Jan 2019 16:02:03 -0700</lastBuildDate>
     
-	<atom:link href="https://yuniver.se/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://yuniver.se/post/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
