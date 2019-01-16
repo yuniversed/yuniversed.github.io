@@ -6,10 +6,19 @@
     <description>Recent content on The Yuniverse</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 09 Jan 2019 16:02:03 -0700</lastBuildDate>
+    <lastBuildDate>Tue, 15 Jan 2019 16:02:03 -0700</lastBuildDate>
     
 	<atom:link href="https://yuniver.se/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Yuniverse</title>
+      <link>https://yuniver.se/about/</link>
+      <pubDate>Tue, 15 Jan 2019 16:02:03 -0700</pubDate>
+      
+      <guid>https://yuniver.se/about/</guid>
+      <description> Who: Me Where: Resident of the Great White north When: Some time  </description>
+    </item>
     
     <item>
       <title>Progress</title>
