@@ -164,6 +164,9 @@ function reqListener () {
 
 	var details = "";
 
+	var count = 0;
+
+	var row = "";
 	for (var index in json['feed']['entry']) {
 		entry = json['feed']['entry'][index];
 		var name = entry['gsx$details']['$t'];
@@ -176,8 +179,18 @@ function reqListener () {
 			document.querySelector('#total_loss .card_content').innerHTML = value;
 			continue;
 		}
+	
+		if (count % 2 == 0) {
+			if (row == "") {
+				row = "<TR>";
+			} else {
+				details += row + "</TR>";
+				row = "<TR>";
+			}
+		}
+		row +=  "<TD style='padding-left:20px'><STRONG>" + name + '</STRONG></TD><TD>' + value + "</TD>";
 
-		details +=  "<TR><TD><STRONG>" + name + '</STRONG></TD><TD>' + value + "</TD></TR>";
+		count += 1;
 	}
 
 	stats.innerHTML = "<center><table>" + details + "</table></center>";
