@@ -113,24 +113,44 @@
       <p>Nearly a decade ago, I started on a weight loss journey where I managed to lose over 70 lbs over a few years. I&rsquo;ve let my weight creep up again over the last 7 or 8 years now to the point where I need to do something about it.  Let&rsquo;s get to it!
 </p>
 
-<center>
-	<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRM1CMw-y_3M9Q_fZVtI03Ysatx2wa2OJld_YdHWy9Mhaxjzy9gUZuwNBlBmuSL6TXq-Me9vGh3FDhl/pubhtml?gid=268391058&amp;single=true&amp;widget=false&amp;headers=false&amp;rm=minimal&amp;chrome=false" width="440" height="188" seamless frameborder="0" allowtransparency="true" style="background: #000000;"></iframe>
-</center>
+
+
+<div id="stats" style="margin-left:auto;margin-right:auto;">
+
+</div>
+
+
+<script type="text/javascript">
+function reqListener () {
+	var stats = document.getElementById('stats');
+	var json = JSON.parse(this.responseText);
+
+	var details = "";
+
+	for (var index in json['feed']['entry']) {
+		entry = json['feed']['entry'][index]
+		details +=  "<TR><TD><STRONG>" + entry['gsx$details']['$t'] + '</STRONG></TD><TD>' + entry['gsx$value']['$t'] + "</TD></TR>";
+	}
+
+	stats.innerHTML = "<center><table>" + details + "</table></center>";
+
+}
+
+var oReq = new XMLHttpRequest();
+oReq.addEventListener("load", reqListener);
+oReq.open("GET", "https://spreadsheets.google.com/feeds/list/18hLmd6gvFBZafkVkOmR91HDeSkLfCx0BoKp4h0mAlrY/3/public/values?alt=json");
+oReq.send();
+
+</script>
 
 
 <ul>
-<li>Keto really helps keep hunger away</li>
-<li>Month end re-evaluation of calorie goals</li>
+<li>Eating low carb (keto) helps me manage hunger pangs.  I find it much easier to reach lower calorie targets when carb consumption is low.</li>
+<li>Intermittent fasting has also been a help to control the amount of calories I am taking in.  Currently 16:8 fasting, and not really having any trouble doing so.</li>
 </ul>
 
-<div style="margin-left:-192px"><iframe width="1142" height="706" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRM1CMw-y_3M9Q_fZVtI03Ysatx2wa2OJld_YdHWy9Mhaxjzy9gUZuwNBlBmuSL6TXq-Me9vGh3FDhl/pubchart?oid=266269936&amp;format=interactive" style="float:center;display:block;"></iframe></div>
-
-
-<ul>
-<li>Red: 1% weight loss per week</li>
-<li>Green:  0.5% weight loss per week</li>
-<li>Yellow: &lsquo;actual value&rsquo; with 8 day moving average</li>
-</ul>
+<p><div style="margin-left:-192px"><iframe width="1142" height="706" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRM1CMw-y_3M9Q_fZVtI03Ysatx2wa2OJld_YdHWy9Mhaxjzy9gUZuwNBlBmuSL6TXq-Me9vGh3FDhl/pubchart?oid=266269936&amp;format=interactive" style="float:center;display:block;"></iframe></div>
+</p>
     </div>
     
   </div>
