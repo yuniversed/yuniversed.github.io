@@ -115,7 +115,44 @@
 
 
 
-<div id="stats" style="margin-left:auto;margin-right:auto;">
+<style>
+
+.card {
+	flex: 1;
+}
+
+.card_title {
+	text-align:center;
+	margin-bottom:0px;
+	font-family: "Gill Sans MT", "Gill Sans", "Gill Sans Std", Verdana, "Bitstream Vera Sans", sans-serif;
+	font-size: .9em;
+	font-weight: 2em;
+	padding-top: 5px;
+}
+
+.card_content {
+	margin-top: 5px;
+	padding-top: 0px;
+	font-size:8em;
+	text-align:center;
+	line-height: .8em;
+}
+
+</style>
+<div  style="display:flex;flex-direction: row;width:100%;">
+	<div id="togo" class="card">
+		<div class="card_content" style="font-size:8em"></div>
+		<div class="card_title" >POUNDS TO GO</div>
+	</div>
+	<div id="total_loss" class="card">
+		<div class="card_content"></div>
+		<div class="card_title">TOTAL WEIGHT LOST</div>
+	</div>
+</div>
+
+<P>
+
+<div id="stats" style="margin-left:auto;margin-right:auto;font-size:.75em;">
 
 </div>
 
@@ -128,8 +165,19 @@ function reqListener () {
 	var details = "";
 
 	for (var index in json['feed']['entry']) {
-		entry = json['feed']['entry'][index]
-		details +=  "<TR><TD><STRONG>" + entry['gsx$details']['$t'] + '</STRONG></TD><TD>' + entry['gsx$value']['$t'] + "</TD></TR>";
+		entry = json['feed']['entry'][index];
+		var name = entry['gsx$details']['$t'];
+		var value = entry['gsx$value']['$t'];
+
+		if (name == "Pounds to Goal") {
+			document.querySelector('#togo .card_content').innerHTML = value;
+			continue;
+		} else if (name == "Weight Lost (lbs)") {
+			document.querySelector('#total_loss .card_content').innerHTML = value;
+			continue;
+		}
+
+		details +=  "<TR><TD><STRONG>" + name + '</STRONG></TD><TD>' + value + "</TD></TR>";
 	}
 
 	stats.innerHTML = "<center><table>" + details + "</table></center>";
